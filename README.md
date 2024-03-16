@@ -27,8 +27,6 @@ Axios is a promise-based HTTP client for making asynchronous requests in JavaScr
 
 The application is deployed on Netlify and can be accessed [here]().
 
-## Todo Page
-
 
  ## How to Run <br/>
    <h2>Installation</h2>
