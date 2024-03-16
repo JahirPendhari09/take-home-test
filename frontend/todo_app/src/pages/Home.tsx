@@ -38,7 +38,7 @@ const Home = () => {
     const submitNewTodo=(e: any)=>{
         e.preventDefault();
         if(title === ""){
-            alert("Please enter Your title")
+            return alert("Please enter Your title")
         }else{
             const newTodo:TODOS = {
                 title:title,
@@ -52,14 +52,14 @@ const Home = () => {
         }  
     }
 
-    console.log(todos)
+    // console.log(todos)
     return (
         <DIV>
             <h1>My Todos</h1>
             <div className="todoBox">
                 <div className="createBox">
                     <input type="text"  placeholder="Enter Title" value={title} onChange={(e)=> setTitle(e.target.value) }/>
-                    <button onClick={submitNewTodo}>Create</button>
+                    <button onClick={submitNewTodo} data-testid="todo-create">Create</button>
                 </div>
                 <div >
                 <hr />
@@ -76,6 +76,7 @@ const Home = () => {
                         ))
                   }
                 </div>
+                {todos.length ==0 && <h3>No todos found.</h3>}
             </div>
         </DIV>
     );

@@ -5,21 +5,23 @@ interface TodoCartProps extends TODOS {
   status: boolean;
 }
 
-const TodoCart= ({ sr, title, status, editTodo, deleteTodo}:TodoCartProps) => {
+const TodoCart = ({ sr, title, status, editTodo, deleteTodo}:TodoCartProps) => {
   return (
-    <DIV>
+<DIV>
       <div className="mainDiv">
         <div className="titleBox">
           <p>{sr}.</p>
           <p>{title}</p>
         </div>
-          <p style={{color: status?"green":"red"}}>{status ? "Completed" : "In Process"}</p>
+        <p style={{color: status ? "green" : "red"}} data-testid="todo-status">
+          {status ? "Completed" : "In Process"}
+        </p>
         <div className="editDeleteBTN">
-          <button onClick={() => editTodo && editTodo()}>Edit </button>
-          <button onClick={() =>  deleteTodo && deleteTodo()}>Delete</button>
+          <button onClick={() => editTodo && editTodo()} data-testid="todo-edit">Edit</button>
+          <button onClick={() => deleteTodo && deleteTodo()} data-testid="todo-delete">Delete</button>
         </div>
+        <hr />
       </div>
-      <hr />
     </DIV>
   );
 };
