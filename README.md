@@ -34,7 +34,8 @@ The application is deployed on Netlify and can be accessed [here]().
    <h2>Installation</h2>
    
    Clone the repository:   ``` git clone https://github.com/JahirPendhari09/take-home-test.git ``` <br/>
-   Navigate to the project directory:   ``` cd take_home_test ``` <br/>
+   Navigate to the project directory:   ``` cd frontend ``` <br/>
+   Navigate to the project directory:   ``` cd todo_app ``` <br/>
    Install the dependencies:   ``` npm install ``` <br/>
    Start the development server:   ``` npm start ``` <br/>
    Open your browser and visit:   ``` http://localhost:3000 ``` <br/>
