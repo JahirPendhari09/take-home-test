@@ -20,8 +20,8 @@ const TodoCart = ({ sr, title, status, editTodo, deleteTodo}:TodoCartProps) => {
           <button onClick={() => editTodo && editTodo()} data-testid="todo-edit">Edit</button>
           <button onClick={() => deleteTodo && deleteTodo()} data-testid="todo-delete">Delete</button>
         </div>
-        <hr />
       </div>
+      <hr />
     </DIV>
   );
 };

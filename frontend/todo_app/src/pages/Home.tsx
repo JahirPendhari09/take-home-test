@@ -1,38 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TodoCart } from "../components/TodoCard";
 
 import "../App.css"
 import styled from "styled-components";
+import { deleteTodos, getTodos, postTodos, updateTodos } from "../actions";
+
 
 export type TODOS = {
     title: string;
     status: boolean;
-    id: number;
+    _id: number;
     sr?:number;
     editTodo?: () => void; 
     deleteTodo?: () => void; 
 };
 
-const Home = () => {
+type todo = {
+    title:string
+}
+
+const Home:React.FC = () => {
     const [todos, setTodos] = useState<TODOS[]>([]);
 
     const[title, setTitle] = useState<string>("");
+    const [ render , setRender]= useState<boolean>(false);
 
-    const editTodo = (id: number) => {
-        const updatedTodos = todos.map((todo) =>
-            todo.id === id ? { ...todo, status: !todo.status } : todo
-        );
-
-        setTodos(updatedTodos);
+    const editTodo = (id: number,status:boolean) => {
+        const updatedTodo = {status: status? false : true}
+        updateTodos(id,updatedTodo).then(res => setRender(!render))
         
     };
     const deleteTodo = (id: number) => {
-        const updatedTodos = todos.filter((todo) =>
-        {
-            return todo.id !== id 
-        });
-
-        setTodos(updatedTodos);
+        deleteTodos(id).then(res => setRender(!render))
     };
 
     const submitNewTodo=(e: any)=>{
@@ -40,19 +39,18 @@ const Home = () => {
         if(title === ""){
             return alert("Please enter Your title")
         }else{
-            const newTodo:TODOS = {
-                title:title,
-                id:Math.random(),
-                status:false,            
-            }
-            const updatedTodo:TODOS[] =  [...todos, newTodo ];
-            setTodos(updatedTodo);
-            setTitle("")
-
+            const newTodo:todo = { title }
+            postTodos(newTodo).then(res => {
+                setTitle("");
+                setRender(!render)
+            })  
         }  
     }
 
-    // console.log(todos)
+    useEffect(()=>{
+        getTodos().then(res => setTodos(res));
+    },[render]);
+    
     return (
         <DIV>
             <h1>My Todos</h1>
@@ -65,18 +63,15 @@ const Home = () => {
                 <hr />
                   {todos?.length > 0 &&
                         todos?.map((item, i) => (
-                            <TodoCart 
-                               id={item.id}
-                               sr={i+1}
-                               title={item.title}
-                               status={item.status}
-                               editTodo={() => editTodo(item.id)}
-                               deleteTodo={() => deleteTodo(item.id)}
+                            <TodoCart key={item._id} _id={item._id} sr={i+1}
+                               title={item.title}  status={item.status}
+                               editTodo={() => editTodo(item._id,item.status)}
+                               deleteTodo={() => deleteTodo(item._id)}
                             />
                         ))
                   }
                 </div>
-                {todos.length ==0 && <h3>No todos found.</h3>}
+                {todos.length === 0 && <h3>No todos found.</h3>}
             </div>
         </DIV>
     );
