@@ -15,8 +15,11 @@ export type TODOS = {
     deleteTodo?: () => void; 
 };
 
-type todo = {
+export type todo = {
     title:string
+}
+export type updateTodo = {
+    status:boolean
 }
 
 const Home:React.FC = () => {
