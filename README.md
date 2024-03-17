@@ -41,7 +41,7 @@ MongoDB is a popular open-source NoSQL database management system that stores da
 
 ## Deployment
 
-The application is deployed on Netlify and can be accessed [here]().
+The application is deployed on Netlify and can be accessed [here](https://take-home-test-assignment.netlify.app/).
 
 
  ## How to Run <br/>
