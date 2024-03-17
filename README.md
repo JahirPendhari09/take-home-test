@@ -22,6 +22,22 @@ React is a JavaScript library for building Ssamless UI. Its component-based arch
 
 Axios is a promise-based HTTP client for making asynchronous requests in JavaScript. It simplifies data fetching and handling HTTP responses, making it a reliable choice for API interactions in React applications.
 
+### 4. Jest Testing 
+
+Jest is a popular JavaScript testing framework developed by Facebook. It's commonly used for testing JavaScript code, including React applications. Jest provides a simple and efficient way to write tests for your code, with features like automatic mocking, snapshot testing, and parallel test execution.
+
+### 5. Node.js 
+
+Node.js is commonly used for building server-side applications, APIs (Application Programming Interfaces), and various other types of software. Its event-driven, non-blocking I/O model makes it efficient and suitable for building scalable and high-performance applications.
+
+### 6. Express 
+
+Express.js, commonly referred to as Express, is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications. It is designed to make the process of building web servers and APIs in Node.js easier and more efficient
+
+### 7. MongoDB 
+
+MongoDB is a popular open-source NoSQL database management system that stores data in a flexible, JSON-like format known as BSON (Binary JSON). It is designed to handle large volumes of data and provides high performance, scalability, and flexibility for modern applications.
+
 
 ## Deployment
 
@@ -29,7 +45,7 @@ The application is deployed on Netlify and can be accessed [here]().
 
 
  ## How to Run <br/>
-   <h2>Installation</h2>
+   <h2>Installation ( Frontend ) </h2>
    
    Clone the repository:   ``` git clone https://github.com/JahirPendhari09/take-home-test.git ``` <br/>
    Navigate to the project directory:   ``` cd frontend ``` <br/>
@@ -38,7 +54,16 @@ The application is deployed on Netlify and can be accessed [here]().
    Start the development server:   ``` npm start ``` <br/>
    Open your browser and visit:   ``` http://localhost:3000 ``` <br/>
 
-   Backend api:   ``` https://home-take-test-backend.onrender.com/ ``` <br/>
+   <h2>Installation ( Backend )</h2>
+   
+   Clone the repository:   ``` git clone https://github.com/JahirPendhari09/take-home-test.git ``` <br/>
+   Navigate to the project directory:   ``` cd backend ``` <br/>
+   Install the dependencies:   ``` npm install ``` <br/>
+   Start the development server:   ``` npm run server ``` <br/>
+   Open your browser and visit:   ``` http://localhost:8080 ``` <br/>
+   
+
+   api:   ``` https://home-take-test-backend.onrender.com/ ``` <br/>
 
    <h2>Endpoints</h2>
    <h3>Get All Todos</h3>
