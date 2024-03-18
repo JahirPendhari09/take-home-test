@@ -5,6 +5,9 @@
 This repository contains the code for a Todo App designed using React with Typescript  for an assignment given by Krinay Infotech Pvt Ltd.
 
 
+## Project Type
+ Fullstack
+
 ## Technologies Used
 ### 1. TypeScript 
 This project is developed using TypeScript, a superset of JavaScript that adds static typing to the language. TypeScript offers several benefits, including:
@@ -45,6 +48,16 @@ Frontend: https://take-home-test-assignment.netlify.app/
 Backend: https://home-take-test-backend.onrender.com/
 
 
+## Demo Presentation : https://drive.google.com/file/d/1YHbH9JfqM_AxpudC9VskBABPEyY52IrK/view?usp=sharing
+
+
+## Features 
+- Create new todo
+- update todo
+- delete todo
+
+
+
  ## How to Run <br/>
    <h2>Installation ( Frontend ) </h2>
    
@@ -52,7 +65,8 @@ Backend: https://home-take-test-backend.onrender.com/
    Navigate to the project directory:   ``` cd frontend ``` <br/>
    Navigate to the project directory:   ``` cd todo_app ``` <br/>
    Install the dependencies:   ``` npm install ``` <br/>
-   Start the development server:   ``` npm start ``` <br/>
+   Start the development server:   ``` npm run start ``` <br/>
+   Start the Testing server:   ``` npm run test ``` <br/>
    Open your browser and visit:   ``` http://localhost:3000 ``` <br/>
 
    <h2>Installation ( Backend )</h2>
