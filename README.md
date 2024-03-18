@@ -39,9 +39,10 @@ Express.js, commonly referred to as Express, is a minimal and flexible Node.js w
 MongoDB is a popular open-source NoSQL database management system that stores data in a flexible, JSON-like format known as BSON (Binary JSON). It is designed to handle large volumes of data and provides high performance, scalability, and flexibility for modern applications.
 
 
-## Deployment
-
-The application is deployed on Netlify and can be accessed [here](https://take-home-test-assignment.netlify.app/).
+## Deplolyed App
+Frontend: https://take-home-test-assignment.netlify.app/
+<br/>
+Backend: https://home-take-test-backend.onrender.com/
 
 
  ## How to Run <br/>
